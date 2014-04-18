@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>domchilds test</title>
+
+    <script src="../domchilds.js" type="text/javascript"></script>
+
+    <link href="domchildstest.css" rel="stylesheet" type="text/css">
+    <script src="domchildstest.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    <h1>See results in the console</h1>
+    
+    <a href="#" id="BttnRm" class="bttn">
+      <span class="bttn-label">Remove Children</span>
+    </a>
+    <a href="#" id="BttnFirst" class="bttn">
+      <span class="bttn-label">Get First Child</span>
+    </a>
+    <a href="#" id="BttnLast" class="bttn">
+      <span class="bttn-label">Get Last Child</span>
+    </a>
+    <a href="#" id="BttnAsHTML" class="bttn">
+      <span class="bttn-label">Get From HTML String</span>
+    </a>
+
+    <div id="Container" class="elements">
+      <div class="elements-child green">
+        one
+      </div>
+      <div class="elements-child blue">
+        two
+      </div>
+      <div class="elements-child red">
+        three
+      </div>
+      <div class="elements-child yellow">
+        four
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      domchildstest.init();
+    </script>
+
+  </body>
+</html>

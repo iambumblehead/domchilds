@@ -1,0 +1,48 @@
+/* Filename: domchildtest.css
+ * Timestamp: 2014.04.18-13:17:44 (last modified)  
+ * Author(s): Bumblehead (www.bumblehead.com)  
+ */
+
+.bttn {
+    display:inline-block;
+    background-color:blue;
+    color:#fff;
+    border:1px solid red;
+}
+
+.bttn:hover {
+    background-color:red;    
+}
+
+.bttn-label {
+    display:inline-block;
+    margin:20px 10px;
+}
+
+.elements {
+    margin-top:30px;
+    background-color:#ccc;
+    display:inline-block;
+    width:400px;
+}
+
+.elements-child {
+    /*display:inline-block;*/
+    margin:4px;
+    height:30px;
+    /*width:360px;*/
+}
+
+.green {
+    background-color:green;
+}
+.blue {
+    background-color:blue;
+}
+.red {
+    background-color:red;
+}
+.yellow {
+    background-color:yellow;
+}
+
