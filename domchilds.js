@@ -2,7 +2,7 @@
 // Timestamp: 2014.04.18-13:48:23 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com)  
 
-var domchilds = (typeof module === 'object' ? module : {}).exports = {
+var domchilds = module.exports = {
 
   rm : function (elem) {
     if (elem && elem.hasChildNodes()) {

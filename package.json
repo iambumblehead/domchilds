@@ -1,12 +1,13 @@
 {
   "name": "domchilds",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "main" : "domchilds.js",
   "readmeFilename": "README.md",
   "license" : "MIT",
   "description": "methods for most common scenarious involving child elements",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iambumblehead/domev.git"
+    "url": "https://github.com/iambumblehead/domchilds.git"
   },
   "keywords": [
     "child",
