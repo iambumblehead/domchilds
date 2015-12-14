@@ -1,42 +1,48 @@
 // Filename: domchilds.js  
-// Timestamp: 2014.04.18-13:48:23 (last modified)  
+// Timestamp: 2015.12.14-11:12:43 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)  
 
-var domchilds = module.exports = {
+var domchilds = module.exports = (function (o) {
 
-  rm : function (elem) {
+  o.rm = function (elem, fn) {
+    fn = typeof fn === 'function' ? fn : function () {};
+    
     if (elem && elem.hasChildNodes()) {
       while (elem.childNodes.length) {
-        elem.removeChild(elem.firstChild);
+        fn(elem.removeChild(elem.firstChild));
       }
     }
-  },
+  };
 
-  getFirstElem : function (elem, ec) {
+  o.getFirstElem = function (elem, ec) {
     if ((ec = elem && elem.firstChild)) {
       do {
         if (ec.nodeType === 1) return ec;
       } while ((ec = ec.nextSibling));
     }
-  },
+  };
 
-  getLastElem : function (elem, ec) {
+  o.getLastElem = function (elem, ec) {
     if ((ec = elem && elem.lastChild)) {
       do {
         if (ec.nodeType === 1) return ec;
       } while ((ec = ec.previousSibling));
     }
-  },
+  };
 
-  getFromHTMLStr : (function (doc, elem) {
+  o.getFromHTMLStr = (function (doc, elem) {
     elem = doc && doc.createElement('i');
     return function (htmlstr, celem, ec) {
       celem = elem.cloneNode();
       celem.innerHTML = htmlstr;
-      ec = this.getFirstElem(celem);
-      celem.removeChild(ec);
+      ec = document.createDocumentFragment();
+      o.rm(celem, function (child) {
+        ec.appendChild(child);
+      });
       return ec;
     };
-  }(document))
+  }(document));
 
-};
+  return o;
+  
+}({}));
