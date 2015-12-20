@@ -1,6 +1,6 @@
 {
   "name": "domchilds",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main" : "domchilds.js",
   "readmeFilename": "README.md",
   "license" : "MIT",

@@ -1,5 +1,5 @@
 // Filename: domchilds.js  
-// Timestamp: 2015.12.14-11:12:43 (last modified)
+// Timestamp: 2015.12.20-00:24:10 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)  
 
 var domchilds = module.exports = (function (o) {
@@ -41,7 +41,7 @@ var domchilds = module.exports = (function (o) {
       });
       return ec;
     };
-  }(document));
+  }(typeof document === 'object' && document));
 
   return o;
   
